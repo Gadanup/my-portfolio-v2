@@ -4,8 +4,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import AboutSection from "../pages/About"; // Import your About component
 import ContactSection from "../pages/Contact"; // Import your Contact component
 import ProjectsSection from "../pages/Projects"; // Import your Projects component
-import ResumeSection from "../pages/Resume"; // Import your Resume component
-import BlogSection from "../pages/Blog"; // Import your Blog component
+import ExperienceMainSection from "@/pages/Experience";
+import SkillsSection from "../pages/Skills"; // Import your Blog component
 
 export default function MainContent({ activeSection, onSectionChange }) {
   const theme = useTheme();
@@ -16,12 +16,12 @@ export default function MainContent({ activeSection, onSectionChange }) {
     switch (activeSection) {
       case "about":
         return <AboutSection onSectionChange={onSectionChange} />;
-      case "resume":
-        return <ResumeSection />;
+      case "experience":
+        return <ExperienceMainSection />;
       case "projects":
         return <ProjectsSection />;
-      case "blog":
-        return <BlogSection />;
+      case "skills":
+        return <SkillsSection />;
       case "contact":
         return <ContactSection />;
       default:
