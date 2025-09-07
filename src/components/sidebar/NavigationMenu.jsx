@@ -15,7 +15,7 @@ import { navigationItems } from "../../data/navigationData";
 
 const NavigationMenu = ({ activeSection, onSectionChange }) => {
   return (
-    <Box sx={{ flex: 1, p: 2 }}>
+    <Box sx={{ flex: 0, p: 2 }}>
       <Typography
         variant="subtitle2"
         sx={{
@@ -47,7 +47,7 @@ const NavigationMenu = ({ activeSection, onSectionChange }) => {
                 sx={{
                   borderRadius: 2,
                   textTransform: "uppercase",
-                  py: 1.5,
+                  py: 1,
                   px: 2,
                   "&.Mui-selected": {
                     background:

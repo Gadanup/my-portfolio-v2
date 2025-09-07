@@ -1,4 +1,4 @@
-// components/skills/TechnicalSkills.jsx - Simple & Cool Desktop Design
+// components/skills/TechnicalSkills.jsx - Complete Clean Component with Real Technology Logos
 
 "use client";
 import {
@@ -14,12 +14,11 @@ import {
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import CodeIcon from "@mui/icons-material/Code";
-import LanguageIcon from "@mui/icons-material/Language";
-import StorageIcon from "@mui/icons-material/Storage";
-import BrushIcon from "@mui/icons-material/Brush";
-import BuildIcon from "@mui/icons-material/Build";
-import CloudIcon from "@mui/icons-material/Cloud";
-import { technicalSkillsData } from "../../data/skillsData";
+import {
+  technicalSkillsData,
+  categoryIcons,
+  getSkillIcon,
+} from "../../data/skillsData";
 
 const TechnicalSkills = () => {
   const theme = useTheme();
@@ -27,19 +26,10 @@ const TechnicalSkills = () => {
   const [selectedCategory, setSelectedCategory] = useState("frontend");
   const [hoveredSkill, setHoveredSkill] = useState(null);
 
-  // Icon mapping for categories
-  const categoryIcons = {
-    frontend: <LanguageIcon />,
-    styling: <BrushIcon />,
-    backend: <StorageIcon />,
-    tools: <BuildIcon />,
-    cloud: <CloudIcon />,
-  };
-
   const categories = Object.keys(technicalSkillsData);
   const currentSkills = technicalSkillsData[selectedCategory];
 
-  // Mobile: Keep existing design (unchanged)
+  // Mobile: Keep existing design with real logos
   if (isMobile) {
     return (
       <Box sx={{ mb: 4 }}>
@@ -129,12 +119,9 @@ const TechnicalSkills = () => {
                       alignItems: "center",
                     }}
                   >
-                    <Typography
-                      variant="h6"
-                      sx={{ fontSize: "1.5rem", mb: 0.5 }}
-                    >
-                      {skill.icon}
-                    </Typography>
+                    <Box sx={{ fontSize: "1.5rem", mb: 0.5 }}>
+                      {getSkillIcon(skill.name)}
+                    </Box>
                     <Typography
                       variant="caption"
                       sx={{
@@ -177,7 +164,7 @@ const TechnicalSkills = () => {
     );
   }
 
-  // Desktop: Simple & Cool Design
+  // Desktop: Simple & Cool Design with real logos
   return (
     <Box sx={{ mb: 6 }}>
       {/* Simple Header */}
@@ -283,19 +270,33 @@ const TechnicalSkills = () => {
                       },
                     }}
                   >
-                    <CardContent sx={{ p: 2.5, textAlign: "center" }}>
-                      {/* Skill Icon */}
+                    <CardContent
+                      sx={{
+                        p: 3,
+                        textAlign: "center",
+                        minHeight: "140px",
+                        display: "flex",
+                        flexDirection: "column",
+                        justifyContent: "center",
+                      }}
+                    >
+                      {/* Skill Icon - Real Logo */}
                       <Box
                         sx={{
-                          fontSize: "2rem",
+                          mt: 1.5,
                           mb: 1,
+                          fontSize: "3rem",
                           transition: "transform 0.3s ease",
+                          display: "flex",
+                          justifyContent: "center",
+                          alignItems: "center",
+                          height: "2.5rem",
                           ...(hoveredSkill === skill.name && {
                             transform: "scale(1.1)",
                           }),
                         }}
                       >
-                        {skill.icon}
+                        {getSkillIcon(skill.name)}
                       </Box>
 
                       {/* Skill Name */}
@@ -303,9 +304,9 @@ const TechnicalSkills = () => {
                         variant="subtitle2"
                         sx={{
                           fontWeight: 600,
-                          mb: 1,
+                          mb: 1.5,
                           color: "text.primary",
-                          fontSize: "0.9rem",
+                          fontSize: "1rem",
                         }}
                       >
                         {skill.name}

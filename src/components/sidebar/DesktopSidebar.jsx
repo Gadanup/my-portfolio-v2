@@ -44,19 +44,48 @@ const DesktopSidebar = ({ activeSection, onSectionChange }) => {
 
       <Divider sx={{ borderColor: "rgba(255, 255, 255, 0.1)", mx: 2 }} />
 
-      {/* Navigation */}
-      <NavigationMenu
-        activeSection={activeSection}
-        onSectionChange={onSectionChange}
-      />
+      {/* Scrollable Content Container */}
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          flex: 1, // This makes it take remaining space
+          position: "relative",
+          zIndex: 1,
+          // Enable smooth scrolling with invisible scrollbar
+          overflowY: "auto",
+          overflowX: "hidden",
+          // Hide scrollbar completely
+          "&::-webkit-scrollbar": {
+            width: "0px",
+            background: "transparent",
+          },
+          "&::-webkit-scrollbar-thumb": {
+            background: "transparent",
+          },
+          // Firefox - hide scrollbar
+          scrollbarWidth: "none",
+          // Internet Explorer/Edge - hide scrollbar
+          msOverflowStyle: "none",
+        }}
+      >
+        {/* Navigation */}
+        <NavigationMenu
+          activeSection={activeSection}
+          onSectionChange={onSectionChange}
+        />
 
-      <Divider sx={{ borderColor: "rgba(255, 255, 255, 0.1)", mx: 2 }} />
+        <Divider sx={{ borderColor: "rgba(255, 255, 255, 0.1)", mx: 2 }} />
 
-      {/* Contact Info */}
-      <ContactInfo />
+        {/* Contact Info */}
+        <ContactInfo />
 
-      {/* Footer */}
-      <FooterSection />
+        {/* Spacer to push footer to bottom */}
+        <Box sx={{ height: 20 }} />
+
+        {/* Footer */}
+        <FooterSection />
+      </Box>
     </Box>
   );
 };

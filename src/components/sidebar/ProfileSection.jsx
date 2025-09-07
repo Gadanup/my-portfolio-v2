@@ -14,7 +14,7 @@ const ProfileSection = () => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <Box sx={{ p: 3, textAlign: "center" }}>
+      <Box sx={{ p: 2, textAlign: "center" }}>
         <motion.div
           whileHover={{ scale: 1.05 }}
           transition={{ type: "spring", stiffness: 300 }}
@@ -79,7 +79,7 @@ const ProfileSection = () => {
           {personalInfo.name}
         </Typography>
 
-        <Box sx={{ display: "flex", justifyContent: "center", mb: 3 }}>
+        <Box sx={{ display: "flex", justifyContent: "center", mb: 1 }}>
           <Chip
             label={personalInfo.title}
             sx={{

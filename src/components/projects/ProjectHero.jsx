@@ -14,6 +14,7 @@ import {
 import { motion } from "framer-motion";
 import { projectsData } from "../../data/projectsData";
 import StarIcon from "@mui/icons-material/Star";
+import { hero } from "../../data/projectsData";
 import TrendingUpIcon from "@mui/icons-material/TrendingUp";
 
 const ProjectsHero = ({ projectsCount }) => {
@@ -46,7 +47,7 @@ const ProjectsHero = ({ projectsCount }) => {
               mb: 2,
             }}
           >
-            My Projects
+            {hero.title}
           </Typography>
 
           <Typography
@@ -58,8 +59,7 @@ const ProjectsHero = ({ projectsCount }) => {
               fontWeight: 400,
             }}
           >
-            A collection of web applications and websites I've built using
-            modern technologies
+            {hero.subtitle}
           </Typography>
 
           <Typography
@@ -70,9 +70,7 @@ const ProjectsHero = ({ projectsCount }) => {
               lineHeight: 1.6,
             }}
           >
-            From full-stack applications to component libraries, each project
-            represents a unique challenge and learning opportunity in modern web
-            development.
+            {hero.description}
           </Typography>
 
           {/* Mobile Tech Stack Chips - Keep these but make them smaller */}
@@ -118,7 +116,7 @@ const ProjectsHero = ({ projectsCount }) => {
                 mb: 2,
               }}
             >
-              My Projects
+              {hero.title}
             </Typography>
 
             <Typography
@@ -130,8 +128,7 @@ const ProjectsHero = ({ projectsCount }) => {
                 fontWeight: 400,
               }}
             >
-              A collection of web applications and websites I've built using
-              modern technologies
+              {hero.subtitle}
             </Typography>
 
             <Typography
@@ -142,10 +139,7 @@ const ProjectsHero = ({ projectsCount }) => {
                 lineHeight: 1.6,
               }}
             >
-              From full-stack applications to component libraries, I focus on
-              creating solutions that are both technically sound and
-              user-friendly. Each project represents a unique challenge and
-              learning opportunity in modern web development.
+              {hero.description}
             </Typography>
 
             <Box sx={{ display: "flex", gap: 2, mb: 3, flexWrap: "wrap" }}>
@@ -340,7 +334,7 @@ const ProjectsHero = ({ projectsCount }) => {
                         'PT 🇵🇹'
                       </Box>
                       ,<br />
-                      {"  "}coffee:{" "}
+                      {"  "}Energy Drinks:{" "}
                       <Box component="span" sx={{ color: "#ff79c6" }}>
                         ∞
                       </Box>
@@ -399,7 +393,7 @@ const ProjectsHero = ({ projectsCount }) => {
                             variant="caption"
                             sx={{ color: "#6272a4", fontSize: "0.7rem" }}
                           >
-                            projects
+                            Projects
                           </Typography>
                         </Box>
                       </Grid>
@@ -419,7 +413,7 @@ const ProjectsHero = ({ projectsCount }) => {
                             variant="caption"
                             sx={{ color: "#6272a4", fontSize: "0.7rem" }}
                           >
-                            ideas
+                            Energy Drinks
                           </Typography>
                         </Box>
                       </Grid>

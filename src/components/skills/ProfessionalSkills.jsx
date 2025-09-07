@@ -18,6 +18,7 @@ import LeadershipIcon from "@mui/icons-material/TrendingUp";
 import ProblemSolvingIcon from "@mui/icons-material/Psychology";
 import AdaptabilityIcon from "@mui/icons-material/AutoAwesome";
 import TimeManagementIcon from "@mui/icons-material/Schedule";
+import SchoolIcon from "@mui/icons-material/School";
 
 const ProfessionalSkills = () => {
   const theme = useTheme();
@@ -36,8 +37,8 @@ const ProfessionalSkills = () => {
       highlights: [
         "Cross-team coordination",
         "Knowledge sharing sessions",
-        "Pair programming advocate",
-        "Code review leadership",
+        "Agile methodology participation",
+        "Code review collaboration",
       ],
     },
     {
@@ -49,10 +50,10 @@ const ProfessionalSkills = () => {
       description:
         "Clear technical communication with both technical and non-technical stakeholders.",
       highlights: [
-        "Client presentations",
         "Technical documentation",
-        "Mentoring developers",
-        "Project stakeholder updates",
+        "Stakeholder updates",
+        "Requirements clarification",
+        "Cross-functional collaboration",
       ],
     },
     {
@@ -65,24 +66,9 @@ const ProfessionalSkills = () => {
         "Analytical thinking and creative solutions to complex technical challenges.",
       highlights: [
         "Complex bug resolution",
-        "Architecture decisions",
         "Performance optimization",
         "User experience solutions",
-      ],
-    },
-    {
-      name: "Leadership & Mentoring",
-      icon: <LeadershipIcon />,
-      color: "#d81b60",
-      emoji: "🎯",
-      strength: "Growing Strength",
-      description:
-        "Guiding junior developers and leading technical initiatives within the team.",
-      highlights: [
-        "Junior developer mentoring",
-        "Technical guidance",
-        "Project coordination",
-        "Best practices advocacy",
+        "Technical troubleshooting",
       ],
     },
     {
@@ -96,8 +82,23 @@ const ProfessionalSkills = () => {
       highlights: [
         "Rapid framework adoption",
         "Agile methodology expert",
-        "Remote collaboration",
-        "Technology migration lead",
+        "Technology migration",
+        "Requirement changes handling",
+      ],
+    },
+    {
+      name: "Learning & Growth",
+      icon: <SchoolIcon />,
+      color: "#d81b60",
+      emoji: "📚",
+      strength: "Growing Strength",
+      description:
+        "Continuous learning and professional development in both enterprise and modern web technologies.",
+      highlights: [
+        "Technology research",
+        "Best practices adoption",
+        "Skill enhancement",
+        "Industry trend awareness",
       ],
     },
     {
@@ -109,10 +110,10 @@ const ProfessionalSkills = () => {
       description:
         "Efficient project planning, deadline management, and prioritization of tasks.",
       highlights: [
-        "Sprint planning expertise",
+        "Sprint planning participation",
+        "Task prioritization",
+        "Deadline adherence",
         "Multi-project coordination",
-        "Consistent deadline delivery",
-        "Priority-based task management",
       ],
     },
   ];
@@ -228,14 +229,14 @@ const ProfessionalSkills = () => {
     );
   }
 
-  // Desktop layout (unchanged)
+  // Desktop layout
   return (
     <Box sx={{ mb: 6 }}>
       <Typography
         variant="h4"
         sx={{
           fontWeight: 600,
-          mb: 4,
+          mb: 2,
           display: "flex",
           alignItems: "center",
           gap: 1,
@@ -254,7 +255,7 @@ const ProfessionalSkills = () => {
         }}
       >
         Beyond technical expertise, these professional capabilities enable
-        effective collaboration and leadership in modern development teams.
+        effective collaboration and delivery in modern development teams.
       </Typography>
 
       <Grid container spacing={3}>

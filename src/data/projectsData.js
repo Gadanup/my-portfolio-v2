@@ -3,10 +3,10 @@
 export const projectsData = {
   projects: [
     {
-      id: 7,
+      id: 1,
       title: "Personal Portfolio Website",
       description:
-        "A comprehensive portfolio showcasing modern web development practices and interactive design.",
+        "A comprehensive portfolio showcasing my experience, skills, and projects.",
       longDescription:
         "This portfolio represents the culmination of my frontend development journey, featuring a fully responsive design with smooth animations, sophisticated dark theme, and modular component architecture. Built with Next.js and Material-UI, it demonstrates my ability to create engaging user experiences while maintaining clean, maintainable code. Every component has been carefully crafted to showcase technical skills while providing an intuitive and enjoyable browsing experience.",
       images: [
@@ -24,13 +24,14 @@ export const projectsData = {
         "JavaScript",
         "CSS3",
         "Responsive Design",
+        "EmailJS",
       ],
-      category: "Next.js",
+      category: "Frontend",
       status: "Live",
-      liveUrl: "", // Dynamic current URL
-      githubUrl: "https://github.com/claudio/portfolio-website",
-      completedDate: new Date().toISOString().split("T")[0], // Current date
-      duration: "3 months",
+      liveUrl: "https://my-portfolio-v2.com", // Dynamic current URL
+      githubUrl: "https://github.com/Gadanup/my-portfolio-v2",
+      completedDate: "28/07/2025", // Current date
+      duration: "2 months",
       highlights: [
         "Responsive design system",
         "Smooth micro-interactions",
@@ -42,14 +43,12 @@ export const projectsData = {
         "Modern dark theme",
       ],
       achievements: [
-        "100% Lighthouse performance score",
         "Fully responsive across all devices",
-        "Smooth 60fps animations",
+        "Dark mode with smooth transitions",
         "Component reusability of 90%+",
       ],
       challenges:
         "Creating a cohesive design system that effectively showcases technical skills while maintaining excellent user experience across all devices. Balancing rich animations with performance optimization and ensuring accessibility compliance without compromising visual appeal.",
-      featured: true,
       color: "#4a90e2",
     },
     {
@@ -64,22 +63,32 @@ export const projectsData = {
         "/veteranos/veteranos-hero.png",
         "/veteranos/veteranos-match.png",
       ],
-      technologies: ["React", "Node.js", "MongoDB", "Chart.js", "Material-UI"],
+      technologies: [
+        "React",
+        "Supabase",
+        "PostgreSQL",
+        "Framer Motion",
+        "JavaScript",
+        "CSS3",
+        "Material-UI",
+      ],
       category: "Full Stack",
       status: "Live",
       liveUrl: "https://demo-ecommerce.com",
       githubUrl: "https://github.com/claudio/ecommerce-dashboard",
-      completedDate: "2024-01-15",
-      duration: "3 months",
+      completedDate: "07/08/2024",
+      duration: "1 month",
       highlights: [
-        "Real-time analytics",
+        "Dynamic team and player statistics",
+        "Interactive league standings",
+        "User-friendly interface",
         "Responsive design",
-        "Advanced filtering",
-        "Role-based access",
+        "Data visualization",
+        "API integration",
+        "Comprehensive match history",
       ],
       challenges:
-        "Optimizing real-time updates for large datasets while maintaining smooth user experience",
-      featured: true,
+        "Ensuring data updates and accurate statistics while maintaining a user-friendly interface. Integrating complex data visualizations without compromising performance or usability.",
       color: "#4a90e2",
     },
     {
@@ -97,29 +106,28 @@ export const projectsData = {
       ],
       technologies: [
         "React",
+        "Next.js",
+        "Material-UI",
         "JavaScript",
         "Supabase",
-        "Database Management",
         "API Integration",
       ],
-      category: "Business Management",
+      category: "Full Stack",
       status: "Live",
-      liveUrl: "https://bennys-cheatsheet.com",
-      githubUrl: "https://github.com/your-username/bennys-cheatsheet",
-      completedDate: "10/02/2025",
+      liveUrl: null,
+      githubUrl: null,
+      completedDate: "12/02/2025",
       duration: "1 month",
       highlights: [
         "Automated cost calculations",
         "Client ticket generation",
-        "Real-time inventory management",
         "Partner pricing system",
         "Multi-user daily usage",
         "Complete stock control",
       ],
       challenges:
         "Creating an intuitive interface that handles complex pricing calculations across different customer types while maintaining real-time inventory accuracy in a multi-user environment",
-      featured: true,
-      color: "#ffa500",
+      color: "#4a90e2",
     },
     {
       id: 4,
@@ -129,13 +137,13 @@ export const projectsData = {
       longDescription:
         "Tugamon reimagines the beloved Pokemon universe through a distinctly Portuguese lens, transforming iconic elements into representations of Portugal's diverse culture. From pastéis de nata-inspired creatures to locations based on historic Portuguese cities, this project creates an immersive digital experience that celebrates national identity while maintaining the charm and adventure of the original concept.",
       images: ["tugamon/tugamon-main.jpg", "tugamon/tugamon-pokedex.jpg"],
-      technologies: ["Next.js", "React", "Design Tools"],
-      category: "Web Applications",
+      technologies: ["Next.js", "React", "Supabase", "Figma", "Design Tools"],
+      category: "Full Stack",
       status: "In Development",
       liveUrl: null,
-      githubUrl: "https://github.com/your-username/tugamon",
+      githubUrl: null,
       completedDate: null,
-      duration: "Ongoing",
+      duration: "Under development",
       highlights: [
         "Portuguese-themed creatures",
         "Cultural location mapping",
@@ -144,15 +152,14 @@ export const projectsData = {
         "Interactive exploration",
       ],
       challenges:
-        "Balancing authentic Portuguese cultural representation with engaging gameplay mechanics while creating original designs that honor both Pokemon's legacy and Portugal's unique identity",
-      featured: true,
-      color: "#ffcc00",
+        "Balancing authentic Portuguese cultural representation with original designs that honor both Pokemon's legacy and Portugal's unique identity",
+      color: "#4a90e2",
     },
     {
       id: 5,
       title: "Blackbeardz DJ Website",
       description:
-        "Professional portfolio and  platform for Portuguese DJ duo Blackbeardz.",
+        "Professional portfolio and platform for Portuguese DJ duo Blackbeardz.",
       longDescription:
         "A dynamic web presence designed to elevate the Blackbeardz brand and streamline their booking process. The site serves as both a comprehensive portfolio showcasing their musical journey and a professional tool for event organizers to discover and book the duo. With seamless integration of major music platforms and smooth animations, the website captures the energy and professionalism of their performances.",
       images: [
@@ -162,17 +169,19 @@ export const projectsData = {
       ],
       technologies: [
         "Next.js",
+        "React",
+        "Material-UI",
+        "Supabase",
         "YouTube API",
         "Spotify API",
         "Framer Motion",
-        "React",
       ],
-      category: "Artist Portfolio",
+      category: "Full Stack",
       status: "In Development",
       liveUrl: null,
-      githubUrl: "https://github.com/your-username/blackbeardz-website",
+      githubUrl: null,
       completedDate: null,
-      duration: "Ongoing",
+      duration: "Under development",
       highlights: [
         "Music platform integration",
         "Booking management system",
@@ -183,32 +192,17 @@ export const projectsData = {
       ],
       challenges:
         "Creating a visually striking design that reflects the duo's musical style while integrating multiple APIs seamlessly and ensuring optimal performance for media-heavy content",
-      featured: true,
-      color: "#1db954",
+      color: "#4a90e2",
     },
   ],
 
-  categories: ["All", "React", "Next.js", "Full Stack", "Landing Pages"],
+  categories: ["All", "Frontend", "Backend", "Full Stack"],
 
   hero: {
     title: "My Projects",
     subtitle:
-      "A collection of web applications and websites I've built using modern technologies",
-    stats: [
-      { label: "Projects Completed", value: "25+", icon: "🚀" },
-      { label: "Technologies Mastered", value: "15+", icon: "💻" },
-      { label: "Lines of Code", value: "50K+", icon: "⚡" },
-      { label: "Client Satisfaction", value: "100%", icon: "⭐" },
-    ],
-    skills: [
-      { name: "React", level: 95, color: "#61dafb" },
-      { name: "Next.js", level: 90, color: "#000000" },
-      { name: "TypeScript", level: 85, color: "#3178c6" },
-      { name: "Node.js", level: 80, color: "#339933" },
-    ],
-  },
-
-  animations: {
-    floatingIcons: ["⚛️", "🚀", "💻", "🎨", "🔧", "✨"],
+      "A collection of web applications and websites I've built using modern technologies.",
+    description:
+      "Explore my portfolio to see the diverse range of projects I've developed, showcasing my skills in frontend, backend and full stack development. Each project reflects my commitment to quality, innovation, and user experience.",
   },
 };

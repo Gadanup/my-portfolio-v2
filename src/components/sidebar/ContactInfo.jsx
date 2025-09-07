@@ -14,6 +14,7 @@ const ContactInfo = () => {
         variant="subtitle2"
         sx={{
           color: "text.secondary",
+          mt: 1,
           mb: 2,
           px: 2,
           textTransform: "uppercase",

@@ -5,37 +5,41 @@ import StarIcon from "@mui/icons-material/Star";
 export const experienceHero = {
   title: "Professional Experience",
   subtitle:
-    "My professional journey as a Frontend Developer, including work experience, education, and key achievements that have shaped my career.",
+    "My professional journey as a Frontend Developer specializing in modern web technologies and enterprise solutions, including React, SAP UI5, and cloud platforms.",
   description:
-    "From university studies to frontend development roles, explore the milestones and experiences that define my professional background.",
-  lastUpdated: "Last updated: December 2025",
+    "From university studies to developing enterprise-grade applications, explore the milestones and experiences that define my technical expertise across both modern web and enterprise development.",
+  lastUpdated: "Last updated: December 2024",
 };
 
 export const experience = [
   {
     id: 1,
-    title: "Frontend Developer (SAPUI5/React)",
+    title: "Frontend Developer (SAP UI5/React)",
     company: "ATOM",
     location: "Dubai, Remote",
     period: "July 2023 - Present",
     type: "Full-time",
     current: true,
     responsibilities: [
-      "Built and maintained enterprise-grade frontend apps using SAPUI5 and React.js, serving over +1000 internal users across several departments",
-      "Developed modular, reusable components using React.js and SAPUI5 XML views, improving code maintainability.",
-      "Collaborated with designers and backend teams to integrate REST APIs and ensure pixel-perfect UI delivery",
-      "Led frontend testing and debugging processes, reducing production bugs",
-      "Contributed to sprint planning, reviews, and retrospectives in a cross-functional agile team using JIRA",
+      "Built and maintained enterprise-grade frontend applications using SAP UI5 and React.js, serving over 1000+ internal users across multiple departments",
+      "Developed and deployed cloud-native solutions on SAP BTP, leveraging various BTP services for scalable application architecture",
+      "Created modular, reusable components using React.js hooks and SAP UI5 XML views, improving code maintainability",
+      "Integrated OData services and REST APIs to connect frontend applications with SAP backend systems and external services",
+      "Collaborated with UX/UI designers and backend teams to deliver pixel-perfect, responsive interfaces across web and mobile platforms",
+      "Led frontend testing strategies and debugging processes, reducing production bugs and improving application stability",
+      "Contributed to sprint planning, reviews, and retrospectives in cross-functional agile teams using JIRA and Monday.com",
     ],
     technologies: [
       "React.js",
-      "SAPUI5",
-      "Javascript (ES6+)",
+      "SAP UI5",
+      "JavaScript (ES6+)",
       "TypeScript",
       "SAP BTP",
+      "SAP Fiori",
       "OData Services",
       "Material UI",
       "Redux",
+      "HTML5/CSS3",
       "Figma",
       "Monday.com",
       "JIRA",
@@ -43,7 +47,8 @@ export const experience = [
     achievements: [
       "Improved code maintainability",
       "Served 1000+ internal users",
-      "Led testing processes",
+      "Led testing and deployment processes",
+      "Successfully integrated cloud services",
     ],
     companyColor: "#4a90e2",
   },
@@ -56,26 +61,31 @@ export const experience = [
     type: "Internship",
     current: false,
     responsibilities: [
-      "Learned and implemented SAPUI5 framework for enterprise application development",
-      "Assisted in building React.js components for internal dashboard applications",
-      "Gained hands-on experience with SAP BTP and OData service integration",
-      "Participated in daily standups and sprint planning meetings",
-      "Collaborated with senior developers to understand enterprise development workflows",
+      "Learned and implemented SAP UI5 framework for enterprise application development following Fiori design principles",
+      "Assisted in building React.js components for internal dashboard applications with modern state management",
+      "Gained hands-on experience with SAP BTP platform services including deployment, monitoring, and integration capabilities",
+      "Worked with OData services to fetch and manipulate data from SAP backend systems",
+      "Participated in daily standups, sprint planning meetings, and code review sessions",
+      "Collaborated with senior developers to understand enterprise development workflows and best practices",
+      "Contributed to UI/UX improvements based on user feedback and usability testing results",
     ],
     technologies: [
-      "SAPUI5",
+      "SAP UI5",
       "React.js",
       "JavaScript",
       "SAP BTP",
+      "SAP Fiori",
       "OData Services",
       "HTML5/CSS3",
+      "Bootstrap",
+      "Git",
       "Figma",
       "JIRA",
     ],
     achievements: [
       "Successfully completed 3-month internship",
       "Transitioned to full-time role",
-      "Mastered SAPUI5 framework basics",
+      "Mastered SAP UI5  fundamentals",
     ],
     companyColor: "#d81b60",
   },
@@ -90,10 +100,12 @@ export const education = [
     period: "September 2020 - October 2023",
     grade: "Bachelor's Degree",
     coursework: [
-      "Information Systems",
-      "Web Development",
-      "Database Management",
-      "Software Engineering",
+      "Information Systems Architecture",
+      "Web Development Technologies",
+      "Database Management Systems",
+      "Software Engineering Principles",
+      "Enterprise System Integration",
+      "Cloud Computing Fundamentals",
     ],
     achievements: ["Completed degree in 3 years"],
   },
@@ -127,36 +139,6 @@ export const certifications = [
   },
 ];
 
-export const skillsCategories = [
-  {
-    category: "Frontend Development",
-    skills: [
-      { name: "React", level: "Expert", years: "3+" },
-      { name: "JavaScript/TypeScript", level: "Advanced", years: "3+" },
-      { name: "CSS3/SASS", level: "Advanced", years: "4+" },
-      { name: "Next.js", level: "Intermediate", years: "2+" },
-    ],
-  },
-  {
-    category: "Backend & Tools",
-    skills: [
-      { name: "Node.js", level: "Intermediate", years: "2+" },
-      { name: "Git/GitHub", level: "Advanced", years: "3+" },
-      { name: "Docker", level: "Beginner", years: "1+" },
-      { name: "AWS", level: "Beginner", years: "1+" },
-    ],
-  },
-  {
-    category: "Professional Skills",
-    skills: [
-      { name: "Team Leadership", level: "Advanced", years: "2+" },
-      { name: "Project Management", level: "Intermediate", years: "2+" },
-      { name: "Mentoring", level: "Advanced", years: "1+" },
-      { name: "Client Communication", level: "Advanced", years: "3+" },
-    ],
-  },
-];
-
 export const languages = [
   {
     name: "Portuguese",
@@ -185,8 +167,9 @@ export const printDialog = {
   title: "Print Resume",
   features: [
     "Professional black and white formatting",
-    "Condensed layout for single-page printing",
+    "Condensed layout optimized for ATS systems",
     "Contact information prominently displayed",
+    "Technology skills clearly categorized",
     "QR code linking to your online portfolio",
   ],
 };

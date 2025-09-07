@@ -12,16 +12,12 @@ import {
 import { motion } from "framer-motion";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import StarIcon from "@mui/icons-material/Star";
+import { heroData } from "../../data/skillsData"; // Importing hero data
 import TrendingUpIcon from "@mui/icons-material/TrendingUp";
 
 const SkillsHero = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("lg"));
-
-  const keyStats = [
-    { label: "Years Experience", value: "3+", color: "#4a90e2" },
-    { label: "Technologies Mastered", value: "15+", color: "#4caf50" },
-  ];
 
   // Mobile: Compact layout
   if (isMobile) {
@@ -39,7 +35,7 @@ const SkillsHero = () => {
               mb: 1.5,
             }}
           >
-            Skills & Expertise
+            {heroData.title}
           </Typography>
 
           <Typography
@@ -51,8 +47,7 @@ const SkillsHero = () => {
               fontWeight: 400,
             }}
           >
-            Senior Frontend Developer with proven track record of delivering
-            high-performance web applications.
+            {heroData.subtitle}
           </Typography>
 
           <Typography
@@ -63,16 +58,14 @@ const SkillsHero = () => {
               lineHeight: 1.6,
             }}
           >
-            3+ years of React expertise, team leadership experience, and a
-            passion for creating exceptional user experiences. Focused on
-            business value through technical excellence.
+            {heroData.description}
           </Typography>
 
           {/* Compact stats */}
           <Box
             sx={{ display: "flex", justifyContent: "center", gap: 3, mb: 2 }}
           >
-            {keyStats.map((stat, index) => (
+            {heroData.keyStats.map((stat, index) => (
               <Box key={index} sx={{ textAlign: "center" }}>
                 <Typography
                   variant="h5"
@@ -105,20 +98,10 @@ const SkillsHero = () => {
             }}
           >
             <Chip
-              label="25+ Projects"
+              label="3 Projects Completed"
               size="small"
               sx={{
                 background: "#4caf50",
-                color: "white",
-                fontSize: "0.7rem",
-                height: 24,
-              }}
-            />
-            <Chip
-              label="98% Satisfaction"
-              size="small"
-              sx={{
-                background: "#4a90e2",
                 color: "white",
                 fontSize: "0.7rem",
                 height: 24,
@@ -142,7 +125,7 @@ const SkillsHero = () => {
 
   // Desktop layout (unchanged)
   return (
-    <Grid container spacing={4} sx={{ mb: 6, alignItems: "center" }}>
+    <Grid container spacing={4} sx={{ mb: 3, alignItems: "center" }}>
       <Grid size={{ xs: 12, lg: 8 }}>
         <Box sx={{ py: isMobile ? 2 : 4 }}>
           <Typography
@@ -156,7 +139,7 @@ const SkillsHero = () => {
               mb: 2,
             }}
           >
-            Skills & Expertise
+            {heroData.title}
           </Typography>
 
           <Typography
@@ -168,8 +151,7 @@ const SkillsHero = () => {
               fontWeight: 400,
             }}
           >
-            Senior Frontend Developer with proven track record of delivering
-            high-performance web applications
+            {heroData.subtitle}
           </Typography>
 
           <Typography
@@ -180,26 +162,15 @@ const SkillsHero = () => {
               lineHeight: 1.6,
             }}
           >
-            3+ years of React expertise, team leadership experience, and a
-            passion for creating exceptional user experiences. Focused on
-            business value through technical excellence.
+            {heroData.description}
           </Typography>
 
           <Box sx={{ display: "flex", gap: 2, mb: 3, flexWrap: "wrap" }}>
             <Chip
               icon={<CheckCircleIcon />}
-              label="25+ Projects Delivered"
+              label="3+ Projects Completed"
               sx={{
                 background: "#4caf50",
-                color: "white",
-                fontWeight: 600,
-              }}
-            />
-            <Chip
-              icon={<StarIcon />}
-              label="98% Client Satisfaction"
-              sx={{
-                background: "#4a90e2",
                 color: "white",
                 fontWeight: 600,
               }}
@@ -237,7 +208,7 @@ const SkillsHero = () => {
             Key Metrics
           </Typography>
 
-          {keyStats.map((stat, index) => (
+          {heroData.keyStats.map((stat, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, x: 20 }}

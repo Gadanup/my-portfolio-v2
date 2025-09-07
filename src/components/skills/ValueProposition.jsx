@@ -11,9 +11,9 @@ import {
   useTheme,
 } from "@mui/material";
 import { motion } from "framer-motion";
-import BusinessIcon from "@mui/icons-material/Business";
+import CodeIcon from "@mui/icons-material/Code";
 import SpeedIcon from "@mui/icons-material/Speed";
-import GroupIcon from "@mui/icons-material/Group";
+import PersonIcon from "@mui/icons-material/Person";
 import { skillsData } from "../../data/skillsData";
 
 const ValueProposition = () => {
@@ -22,25 +22,25 @@ const ValueProposition = () => {
 
   const propositionSections = [
     {
-      icon: <BusinessIcon />,
-      title: "Business Impact",
+      icon: <CodeIcon />,
+      title: "Technical Skills",
       color: "#4a90e2",
-      emoji: "📊",
-      points: skillsData.valueProposition.business,
-    },
-    {
-      icon: <SpeedIcon />,
-      title: "Technical Excellence",
-      color: "#4caf50",
       emoji: "⚡",
       points: skillsData.valueProposition.technical,
     },
     {
-      icon: <GroupIcon />,
-      title: "Leadership & Growth",
-      color: "#d81b60",
+      icon: <SpeedIcon />,
+      title: "Delivery & Quality",
+      color: "#4caf50",
       emoji: "🎯",
-      points: skillsData.valueProposition.leadership,
+      points: skillsData.valueProposition.delivery,
+    },
+    {
+      icon: <PersonIcon />,
+      title: "Professional Growth",
+      color: "#d81b60",
+      emoji: "🚀",
+      points: skillsData.valueProposition.professional,
     },
   ];
 
@@ -58,7 +58,7 @@ const ValueProposition = () => {
               color: "primary.main",
             }}
           >
-            Why Choose Me
+            What I Bring to Your Team
           </Typography>
 
           <Typography
@@ -70,8 +70,8 @@ const ValueProposition = () => {
               lineHeight: 1.5,
             }}
           >
-            Ready to bring technical expertise and proven results to your next
-            project
+            Ready to contribute with modern skills, reliable delivery, and a
+            passion for growth
           </Typography>
 
           {/* Mobile: Simple vertical list */}
@@ -134,7 +134,7 @@ const ValueProposition = () => {
                         fontSize: "0.7rem",
                       }}
                     >
-                      +{section.points.length - 2} more benefits
+                      +{section.points.length - 2} more strengths
                     </Typography>
                   )}
                 </Box>
@@ -146,7 +146,7 @@ const ValueProposition = () => {
     );
   }
 
-  // Desktop layout (unchanged)
+  // Desktop layout
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -171,7 +171,7 @@ const ValueProposition = () => {
               color: "text.primary",
             }}
           >
-            Why Choose Me as Your Frontend Developer
+            What I Bring to Your Team
           </Typography>
 
           <Grid container spacing={4}>
@@ -226,9 +226,9 @@ const ValueProposition = () => {
                 fontWeight: 500,
               }}
             >
-              Ready to bring technical expertise, leadership experience, and
-              proven results to your next project. Let's build something amazing
-              together.
+              Ready to contribute to your team with modern technical skills,
+              reliable delivery, and enthusiasm for continuous learning. Let's
+              build something great together.
             </Typography>
           </Box>
         </CardContent>

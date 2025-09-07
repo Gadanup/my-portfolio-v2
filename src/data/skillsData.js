@@ -1,46 +1,182 @@
 // Technical Skills Data - Centralized data for the TechnicalSkills component
 
+import React from "react";
+import LanguageIcon from "@mui/icons-material/Language";
+import StorageIcon from "@mui/icons-material/Storage";
+import BrushIcon from "@mui/icons-material/Brush";
+import BuildIcon from "@mui/icons-material/Build";
+import CloudIcon from "@mui/icons-material/Cloud";
+import {
+  TbBrandFramerMotion,
+  TbBrandMonday,
+  TbBrandVscode,
+} from "react-icons/tb";
+
+// Import React Icons for technology logos
+import {
+  SiReact,
+  SiNextdotjs,
+  SiTypescript,
+  SiJavascript,
+  SiHtml5,
+  SiCss3,
+  SiRedux,
+  SiSupabase,
+  SiTailwindcss,
+  SiMui,
+  SiStyledcomponents,
+  SiNodedotjs,
+  SiMongodb,
+  SiPostgresql,
+  SiGit,
+  SiGithub,
+  SiVite,
+  SiJira,
+  SiFigma,
+  SiVercel,
+  SiNetlify,
+  SiGithubactions,
+  SiHeroku,
+  SiSap,
+} from "react-icons/si";
+import { Box } from "@mui/material";
+
+export const heroData = {
+  title: "Skills & Expertise",
+  subtitle:
+    "A showcase of my technical capabilities across enterprise and modern web development.",
+  description:
+    "Here you'll find a comprehensive overview of my skills spanning SAP enterprise solutions, modern React development, and the full spectrum of frontend technologies.",
+  keyStats: [
+    { label: "Years Experience", value: "2+", color: "#4a90e2" },
+    { label: "Technologies Mastered", value: "25+", color: "#4caf50" },
+    { label: "Projects Delivered", value: "5+", color: "#ff9800" },
+  ],
+};
+
+// Category icons for the navigation
+export const categoryIcons = {
+  enterprise: <CloudIcon />,
+  frontend: <LanguageIcon />,
+  styling: <BrushIcon />,
+  backend: <StorageIcon />,
+  tools: <BuildIcon />,
+};
+
+// Technology logo mapping
+export const technologyIcons = {
+  // Enterprise
+  "SAP UI5": <SiSap color="#0070F3" />,
+  "SAP Fiori": <SiSap color="#0070F3" />,
+  "SAP BTP": <SiSap color="#0070F3" />,
+  "OData Services": <SiSap color="#0070F3" />,
+
+  // Frontend
+  JavaScript: <SiJavascript color="#F7DF1E" />,
+  React: <SiReact color="#61DAFB" />,
+  "Next.js": <SiNextdotjs color="#000000" />,
+  TypeScript: <SiTypescript color="#3178C6" />,
+  HTML5: <SiHtml5 color="#E34F26" />,
+  CSS3: <SiCss3 color="#1572B6" />,
+  Redux: <SiRedux color="#764ABC" />,
+
+  // Styling
+  "Material-UI": <SiMui color="#007FFF" />,
+  Tailwind: <SiTailwindcss color="#06B6D4" />,
+  "Styled Components": <SiStyledcomponents color="#DB7093" />,
+  "Framer Motion": <TbBrandFramerMotion color="#0055FF" />,
+  "Responsive Design": <Box sx={{ fontSize: "2rem" }}>📱</Box>,
+  "UI/UX Design": <Box sx={{ fontSize: "2rem" }}>🎨</Box>,
+
+  // Backend
+  Supabase: <SiSupabase color="#3ECF8E" />,
+  "Node.js": <SiNodedotjs color="#339933" />,
+  PostgreSQL: <SiPostgresql color="#336791" />,
+
+  // Tools
+  Git: <SiGit color="#F05032" />,
+  Github: <SiGithub color="#181717" />,
+  Vite: <SiVite color="#646CFF" />,
+  Figma: <SiFigma color="#F24E1E" />,
+  Monday: <TbBrandMonday color="#F24E1E" />,
+  JIRA: <SiJira color="#2684FF" />,
+  "VS Code": <TbBrandVscode color="#007ACC" />,
+  Vercel: <SiVercel color="#000000" />,
+  Netlify: <SiNetlify color="#00C7B7" />,
+};
+
+// Helper function to get skill icon
+export const getSkillIcon = (skillName) => {
+  return technologyIcons[skillName] || <Box sx={{ fontSize: "2rem" }}>⚡</Box>;
+};
+
 export const technicalSkillsData = {
   frontend: {
-    title: "Frontend Arsenal",
+    title: "Modern Frontend",
     color: "#61dafb",
     gradient: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
     skills: [
       {
         name: "React",
-        icon: "⚛️",
         description: "Building dynamic UIs with modern patterns",
-        tags: ["Hooks", "Context", "JSX", "Virtual DOM"],
+        tags: ["Hooks", "Context API", "JSX", "Component Architecture"],
       },
       {
         name: "Next.js",
-        icon: "▲",
         description: "Full-stack React framework for production",
-        tags: ["SSR", "API Routes", "App Router", "Middleware"],
-      },
-      {
-        name: "TypeScript",
-        icon: "🔷",
-        description: "Type-safe JavaScript for scalable apps",
-        tags: ["Interfaces", "Generics", "Decorators", "Type Guards"],
+        tags: ["SSR/SSG", "API Routes", "App Router", "Performance"],
       },
       {
         name: "JavaScript",
-        icon: "🟨",
         description: "The language powering modern web",
-        tags: ["ES6+", "Async/Await", "Modules", "Closures"],
+        tags: ["ES6+", "Async/Await", "Modules", "Event Handling"],
       },
       {
-        name: "Vue.js",
-        icon: "💚",
-        description: "Progressive framework for building UIs",
-        tags: ["Composition API", "Vuex", "Nuxt", "Reactivity"],
+        name: "TypeScript",
+        description: "Type-safe JavaScript for scalable applications",
+        tags: ["Interfaces", "Generics", "Type Safety", "IntelliSense"],
       },
       {
-        name: "Angular",
-        icon: "🅰️",
-        description: "Platform for building enterprise apps",
-        tags: ["RxJS", "Services", "Guards", "Dependency Injection"],
+        name: "HTML5",
+        description: "Semantic markup and modern web standards",
+        tags: ["Semantic Elements", "Accessibility", "Forms", "APIs"],
+      },
+      {
+        name: "CSS3",
+        description: "Modern styling with advanced techniques",
+        tags: ["Flexbox", "Grid", "Animations", "Custom Properties"],
+      },
+      {
+        name: "Redux",
+        description: "Predictable state management for JavaScript apps",
+        tags: ["Actions", "Reducers", "Store", "Middleware"],
+      },
+    ],
+  },
+  enterprise: {
+    title: "Enterprise Solutions",
+    color: "#0070F3",
+    gradient: "linear-gradient(135deg, #0070F3 0%, #0052CC 100%)",
+    skills: [
+      {
+        name: "SAP UI5",
+        description: "Enterprise-grade UI development framework",
+        tags: ["MVC Pattern", "XML Views", "Data Binding", "Custom Controls"],
+      },
+      {
+        name: "SAP Fiori",
+        description: "Modern UX for SAP applications",
+        tags: ["Design Guidelines", "Launchpad", "Elements", "Freestyle"],
+      },
+      {
+        name: "SAP BTP",
+        description: "Business Technology Platform for cloud applications",
+        tags: ["Cloud Foundry", "Integration", "Services", "Deployment"],
+      },
+      {
+        name: "OData Services",
+        description: "REST-based data services for SAP integration",
+        tags: ["CRUD Operations", "Filtering", "Metadata", "Navigation"],
       },
     ],
   },
@@ -50,169 +186,108 @@ export const technicalSkillsData = {
     gradient: "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)",
     skills: [
       {
-        name: "CSS3",
-        icon: "🎨",
-        description: "Modern styling with latest features",
-        tags: ["Grid", "Flexbox", "Animations", "Custom Properties"],
-      },
-      {
-        name: "Sass",
-        icon: "💄",
-        description: "CSS with superpowers and organization",
-        tags: ["Mixins", "Variables", "Nesting", "Partials"],
+        name: "Material-UI",
+        description: "React component library with Material Design",
+        tags: ["Theming", "Components", "Customization", "Responsive"],
       },
       {
         name: "Tailwind",
-        icon: "🌊",
-        description: "Utility-first CSS framework",
-        tags: ["JIT", "Components", "Responsive", "Dark Mode"],
-      },
-      {
-        name: "Material-UI",
-        icon: "🎯",
-        description: "React component library with Material Design",
-        tags: ["Theming", "Custom Components", "Responsive", "Accessibility"],
+        description: "Utility-first CSS framework for rapid development",
+        tags: ["Utility Classes", "Responsive", "Custom Config", "JIT"],
       },
       {
         name: "Styled Components",
-        icon: "💅",
-        description: "CSS-in-JS styling solution",
-        tags: ["Dynamic Styling", "Theming", "Props", "Server Rendering"],
+        description: "CSS-in-JS styling solution for React",
+        tags: ["Dynamic Styling", "Theming", "Props-based", "Encapsulation"],
       },
       {
         name: "Framer Motion",
-        icon: "🎬",
         description: "Production-ready motion library for React",
-        tags: ["Gestures", "Variants", "Layout Animations", "SVG"],
+        tags: ["Animations", "Gestures", "Layout", "SVG Animations"],
+      },
+      {
+        name: "Responsive Design",
+        description: "Creating adaptable layouts for all devices",
+        tags: ["Mobile-First", "Breakpoints", "Fluid Grids", "Touch"],
+      },
+      {
+        name: "UI/UX Design",
+        description: "User-centered design principles and practices",
+        tags: ["User Experience", "Interface Design", "Prototyping", "Testing"],
       },
     ],
   },
   backend: {
-    title: "Backend & Database",
+    title: "Backend & Integration",
     color: "#4ecdc4",
     gradient: "linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%)",
     skills: [
       {
         name: "Node.js",
-        icon: "🟢",
         description: "JavaScript runtime for server-side development",
-        tags: ["Express", "Middleware", "REST APIs", "Event Loop"],
+        tags: ["Express", "API Development", "Middleware", "Event Loop"],
       },
       {
-        name: "MongoDB",
-        icon: "🍃",
-        description: "NoSQL database for flexible data storage",
-        tags: ["Aggregation", "Indexing", "Mongoose", "Atlas"],
+        name: "Supabase",
+        description: "Open-source Firebase alternative",
+        tags: ["PostgreSQL", "Authentication", "Real-time", "Storage"],
       },
       {
         name: "PostgreSQL",
-        icon: "🐘",
         description: "Advanced open-source relational database",
-        tags: ["Complex Queries", "Relations", "Optimization", "JSONB"],
-      },
-      {
-        name: "Firebase",
-        icon: "🔥",
-        description: "Google's comprehensive app platform",
-        tags: ["Firestore", "Authentication", "Hosting", "Functions"],
-      },
-      {
-        name: "GraphQL",
-        icon: "🏛️",
-        description: "Query language for APIs",
-        tags: ["Resolvers", "Schema", "Apollo", "Subscriptions"],
-      },
-      {
-        name: "Prisma",
-        icon: "🔺",
-        description: "Next-generation database toolkit",
-        tags: ["ORM", "Migrations", "Type Safety", "Schema"],
+        tags: ["SQL", "Relations", "Indexing", "JSON Support"],
       },
     ],
   },
   tools: {
-    title: "Tools & Workflow",
+    title: "Development Tools",
     color: "#feca57",
     gradient: "linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%)",
     skills: [
       {
+        name: "VS Code",
+        description: "Powerful code editor with rich ecosystem",
+        tags: ["Extensions", "Debugging", "IntelliSense", "Git Integration"],
+      },
+      {
         name: "Git",
-        icon: "🔀",
-        description: "Distributed version control system",
-        tags: ["Branching", "Merging", "Workflow", "Collaboration"],
+        description: "Distributed version control for collaboration",
+        tags: ["Branching", "Merging", "Workflows", "Conflict Resolution"],
       },
       {
-        name: "Docker",
-        icon: "🐳",
-        description: "Containerization platform for deployment",
-        tags: ["Images", "Compose", "Deployment", "Microservices"],
-      },
-      {
-        name: "Webpack",
-        icon: "📦",
-        description: "Static module bundler for modern apps",
-        tags: ["Loaders", "Plugins", "Optimization", "Code Splitting"],
+        name: "Github",
+        description: "Code hosting platform for project collaboration",
+        tags: ["Pull Requests", "Issues", "Actions", "Code Review"],
       },
       {
         name: "Vite",
-        icon: "⚡",
         description: "Next generation frontend build tool",
-        tags: ["Hot Reload", "ESBuild", "Rollup", "Lightning Fast"],
-      },
-      {
-        name: "Jest",
-        icon: "🃏",
-        description: "Delightful JavaScript testing framework",
-        tags: ["Unit Testing", "Mocking", "Coverage", "Snapshots"],
+        tags: ["Hot Reload", "Build Optimization", "Plugin System", "Fast"],
       },
       {
         name: "Figma",
-        icon: "🎨",
         description: "Collaborative interface design tool",
-        tags: ["Prototyping", "Components", "Design Systems", "Handoff"],
+        tags: ["Design Systems", "Prototyping", "Handoff", "Components"],
       },
-    ],
-  },
-  cloud: {
-    title: "Cloud & DevOps",
-    color: "#a55eea",
-    gradient: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
-    skills: [
       {
-        name: "AWS",
-        icon: "☁️",
-        description: "Amazon Web Services cloud platform",
-        tags: ["S3", "Lambda", "EC2", "CloudFront"],
+        name: "Monday",
+        description: "Work operating system for project management",
+        tags: ["Task Management", "Collaboration", "Automation", "Reporting"],
+      },
+      {
+        name: "JIRA",
+        description: "Agile project management and issue tracking",
+        tags: ["Scrum", "Kanban", "Sprint Planning", "Bug Tracking"],
       },
       {
         name: "Vercel",
-        icon: "▲",
-        description: "Platform for frontend deployment",
-        tags: ["Serverless", "Edge Functions", "Analytics", "Preview"],
+        description: "Platform for frontend deployment and hosting",
+        tags: ["Serverless", "Edge Functions", "Analytics", "Previews"],
       },
       {
         name: "Netlify",
-        icon: "🌐",
         description: "JAMstack deployment platform",
-        tags: ["Edge Functions", "Forms", "CDN", "Split Testing"],
-      },
-      {
-        name: "GitHub Actions",
-        icon: "🤖",
-        description: "CI/CD workflows for automation",
-        tags: ["Automation", "Testing", "Deployment", "Workflows"],
-      },
-      {
-        name: "Heroku",
-        icon: "🟣",
-        description: "Cloud platform for app deployment",
-        tags: ["Dynos", "Add-ons", "Pipelines", "Scaling"],
-      },
-      {
-        name: "Railway",
-        icon: "🚂",
-        description: "Modern application hosting platform",
-        tags: ["Git Deploy", "Database", "Monitoring", "Templates"],
+        tags: ["Continuous Deployment", "Forms", "Functions", "CDN"],
       },
     ],
   },
@@ -223,92 +298,138 @@ export const skillsData = {
   // Core technical competencies
   coreSkills: [
     {
-      name: "React & Ecosystem",
-      proficiency: "Expert",
-      years: "3+",
+      name: "React & Modern Web",
+      proficiency: "Advanced",
+      years: "2+",
       highlights: [
-        "Advanced Patterns",
+        "Component Architecture",
+        "State Management",
         "Performance Optimization",
-        "Context API",
-        "Custom Hooks",
+        "Modern Patterns",
       ],
       businessValue:
-        "Reduced development time by 40% through reusable component architecture",
+        "Built responsive web applications serving 1000+ users with modern React patterns",
+    },
+    {
+      name: "SAP UI5 & Enterprise",
+      proficiency: "Advanced",
+      years: "1.5+",
+      highlights: [
+        "Enterprise Apps",
+        "Fiori Design",
+        "OData Integration",
+        "BTP Deployment",
+      ],
+      businessValue:
+        "Delivered enterprise-grade SAP applications with improved user experience and performance",
     },
     {
       name: "JavaScript/TypeScript",
-      proficiency: "Expert",
+      proficiency: "Advanced",
       years: "3+",
       highlights: ["ES6+", "Async Programming", "Type Safety", "Modern Syntax"],
       businessValue:
-        "Improved code quality and reduced bugs by 60% with TypeScript adoption",
+        "Improved code quality and reduced bugs through strong JavaScript fundamentals and TypeScript adoption",
     },
     {
-      name: "Next.js",
-      proficiency: "Advanced",
-      years: "2+",
-      highlights: ["App Router", "SSR/SSG", "API Routes", "Performance"],
-      businessValue:
-        "Achieved 50% faster page loads through server-side optimization",
-    },
-    {
-      name: "CSS3 & Styling",
+      name: "CSS3 & Modern Styling",
       proficiency: "Expert",
       years: "4+",
       highlights: [
         "Responsive Design",
         "CSS Grid/Flexbox",
-        "Animations",
-        "Modern CSS",
+        "Component Libraries",
+        "Design Systems",
       ],
       businessValue:
-        "Delivered pixel-perfect designs with 98% mobile compatibility",
+        "Delivered pixel-perfect, mobile-responsive designs with excellent cross-browser compatibility",
     },
   ],
 
-  // Professional capabilities
+  // Professional capabilities - adjusted for 2+ year experience level
   professionalSkills: [
     {
-      category: "Leadership & Communication",
-      skills: [
-        {
-          name: "Team Leadership",
-          description: "Led cross-functional teams of 3-5 developers",
-          impact: "Delivered 12+ projects on time with 95% client satisfaction",
-        },
-        {
-          name: "Client Communication",
-          description: "Direct client interaction and requirement gathering",
-          impact:
-            "Reduced project revisions by 50% through clear communication",
-        },
-        {
-          name: "Code Review & Mentoring",
-          description:
-            "Mentored 2 junior developers, conducted 200+ code reviews",
-          impact: "Improved team code quality score from 7.2 to 9.1",
-        },
+      name: "Team Collaboration",
+      color: "#4caf50",
+      emoji: "🤝",
+      strength: "Core Strength",
+      description:
+        "Working effectively with cross-functional teams, sharing knowledge, and contributing to team success.",
+      highlights: [
+        "Cross-team coordination",
+        "Knowledge sharing sessions",
+        "Agile methodology participation",
+        "Code review collaboration",
       ],
     },
     {
-      category: "Project Management",
-      skills: [
-        {
-          name: "Agile Methodologies",
-          description:
-            "Scrum Master experience, sprint planning, retrospectives",
-          impact: "Increased team velocity by 30% through process optimization",
-        },
-        {
-          name: "Timeline Management",
-          description: "Multi-project coordination and deadline management",
-          impact: "Maintained 100% on-time delivery rate across 25+ projects",
-        },
-        {
-          name: "Stakeholder Management",
-          description: "Requirements gathering and expectation management",
-          impact: "Achieved 98% stakeholder satisfaction in project deliveries",
-        },
+      name: "Communication",
+      color: "#4a90e2",
+      emoji: "💬",
+      strength: "Core Strength",
+      description:
+        "Clear technical communication with both technical and non-technical stakeholders.",
+      highlights: [
+        "Technical documentation",
+        "Stakeholder updates",
+        "Requirements clarification",
+        "Cross-functional collaboration",
+      ],
+    },
+    {
+      name: "Problem Solving",
+      color: "#9c27b0",
+      emoji: "🧩",
+      strength: "Core Strength",
+      description:
+        "Analytical thinking and creative solutions to complex technical challenges.",
+      highlights: [
+        "Complex bug resolution",
+        "Performance optimization",
+        "User experience solutions",
+        "Technical troubleshooting",
+      ],
+    },
+    {
+      name: "Adaptability",
+      color: "#ff9800",
+      emoji: "🔄",
+      strength: "Core Strength",
+      description:
+        "Quick adaptation to new technologies, changing requirements, and evolving project needs.",
+      highlights: [
+        "Rapid framework adoption",
+        "Agile methodology expert",
+        "Technology migration",
+        "Requirement changes handling",
+      ],
+    },
+    {
+      name: "Learning & Growth",
+      color: "#d81b60",
+      emoji: "📚",
+      strength: "Growing Strength",
+      description:
+        "Continuous learning and professional development in both enterprise and modern web technologies.",
+      highlights: [
+        "Technology research",
+        "Best practices adoption",
+        "Skill enhancement",
+        "Industry trend awareness",
+      ],
+    },
+    {
+      name: "Time Management",
+      color: "#607d8b",
+      emoji: "⏰",
+      strength: "Developed Skill",
+      description:
+        "Efficient project planning, deadline management, and prioritization of tasks.",
+      highlights: [
+        "Sprint planning participation",
+        "Task prioritization",
+        "Deadline adherence",
+        "Multi-project coordination",
       ],
     },
   ],
@@ -316,226 +437,73 @@ export const skillsData = {
   // Technical stack by category
   technicalStack: [
     {
+      category: "Enterprise Development",
+      icon: "🏢",
+      color: "#0070F3",
+      technologies: [
+        { name: "SAP UI5", level: "Advanced", projects: "5+" },
+        { name: "SAP Fiori", level: "Advanced", projects: "5+" },
+        { name: "SAP BTP", level: "Intermediate", projects: "3+" },
+        { name: "OData Services", level: "Advanced", projects: "5+" },
+      ],
+    },
+    {
       category: "Frontend Frameworks",
       icon: "⚛️",
       color: "#61dafb",
       technologies: [
-        { name: "React", level: "Expert", projects: "15+" },
-        { name: "Next.js", level: "Advanced", projects: "8+" },
-        { name: "Vue.js", level: "Intermediate", projects: "3+" },
-        { name: "Angular", level: "Familiar", projects: "2+" },
+        { name: "React", level: "Advanced", projects: "8+" },
+        { name: "Next.js", level: "Intermediate", projects: "3+" },
+        { name: "JavaScript", level: "Advanced", projects: "10+" },
+        { name: "TypeScript", level: "Intermediate", projects: "4+" },
       ],
     },
     {
-      category: "Languages & Core",
-      icon: "📝",
-      color: "#f7df1e",
-      technologies: [
-        { name: "JavaScript", level: "Expert", projects: "25+" },
-        { name: "TypeScript", level: "Advanced", projects: "12+" },
-        { name: "HTML5/CSS3", level: "Expert", projects: "25+" },
-        { name: "Node.js", level: "Intermediate", projects: "6+" },
-      ],
-    },
-    {
-      category: "Styling & UI",
+      category: "Styling & Design",
       icon: "🎨",
       color: "#1572b6",
       technologies: [
-        { name: "Material-UI", level: "Expert", projects: "10+" },
-        { name: "Tailwind CSS", level: "Advanced", projects: "8+" },
-        { name: "Sass/SCSS", level: "Advanced", projects: "12+" },
-        { name: "Styled Components", level: "Advanced", projects: "6+" },
+        { name: "Material-UI", level: "Advanced", projects: "6+" },
+        { name: "CSS3/SASS", level: "Expert", projects: "10+" },
+        { name: "Tailwind CSS", level: "Intermediate", projects: "4+" },
+        { name: "Responsive Design", level: "Expert", projects: "10+" },
       ],
     },
     {
-      category: "Tools & Workflow",
+      category: "Development Tools",
       icon: "🔧",
       color: "#4a90e2",
       technologies: [
-        { name: "Git/GitHub", level: "Expert", projects: "25+" },
-        { name: "VS Code", level: "Expert", projects: "25+" },
-        { name: "Figma", level: "Advanced", projects: "15+" },
-        { name: "Chrome DevTools", level: "Expert", projects: "25+" },
+        { name: "Git/GitHub", level: "Advanced", projects: "10+" },
+        { name: "VS Code", level: "Expert", projects: "10+" },
+        { name: "Figma", level: "Intermediate", projects: "8+" },
+        { name: "JIRA", level: "Advanced", projects: "6+" },
       ],
-    },
-  ],
-
-  // Recent achievements and milestones
-  achievements: [
-    {
-      title: "Performance Champion",
-      description:
-        "Optimized application performance, achieving 40% faster load times",
-      impact: "Improved user engagement by 25%",
-      timeframe: "Last 6 months",
-    },
-    {
-      title: "Team Mentor",
-      description:
-        "Successfully mentored 2 junior developers to mid-level positions",
-      impact: "Reduced onboarding time by 50%",
-      timeframe: "2023",
-    },
-    {
-      title: "Technical Leader",
-      description:
-        "Led migration to Next.js 14 App Router across 3 major projects",
-      impact: "Enhanced SEO performance by 60%",
-      timeframe: "2024",
-    },
-  ],
-
-  // Current learning initiatives
-  currentLearning: [
-    {
-      technology: "Three.js",
-      progress: "Learning",
-      motivation: "3D web experiences and interactive portfolios",
-      timeline: "3 months",
-      businessRelevance: "Emerging demand for immersive web experiences",
-    },
-    {
-      technology: "GraphQL",
-      progress: "Implementing",
-      motivation: "More efficient API communication",
-      timeline: "2 months",
-      businessRelevance: "Reduced data fetching overhead by 30%",
-    },
-    {
-      technology: "DevOps & CI/CD",
-      progress: "Expanding",
-      motivation: "Full-stack deployment capabilities",
-      timeline: "4 months",
-      businessRelevance: "Streamlined deployment processes",
-    },
-  ],
-
-  // Career progression and timeline
-  careerMilestones: [
-    {
-      year: "2024",
-      role: "Senior Frontend Developer",
-      company: "TechCorp Solutions",
-      keyAchievements: [
-        "Led team of 3 developers",
-        "Delivered 8 major projects",
-        "Implemented performance optimization strategies",
-        "Mentored junior developers",
-      ],
-      technologiesUsed: ["React", "Next.js", "TypeScript", "Material-UI"],
-    },
-    {
-      year: "2023",
-      role: "Frontend Developer",
-      company: "StartupCo",
-      keyAchievements: [
-        "Built responsive web applications",
-        "Integrated payment systems",
-        "Achieved 95% test coverage",
-        "Improved mobile experience",
-      ],
-      technologiesUsed: ["React", "JavaScript", "CSS3", "Redux"],
-    },
-    {
-      year: "2022",
-      role: "Junior Frontend Developer",
-      company: "Digital Agency",
-      keyAchievements: [
-        "Developed 25+ client websites",
-        "Maintained WordPress projects",
-        "Learned React ecosystem",
-        "Achieved client satisfaction goals",
-      ],
-      technologiesUsed: ["HTML5", "CSS3", "JavaScript", "WordPress"],
     },
   ],
 
   // Value propositions for hiring managers
   valueProposition: {
     technical: [
-      "3+ years of React expertise with proven track record",
-      "Performance optimization specialist - 40% improvement average",
-      "Full-stack capabilities with modern development practices",
-      "Cross-browser compatibility and responsive design expert",
+      "2+ years of hands-on experience in both SAP enterprise and modern React development",
+      "Proficient in SAP UI5, Fiori, and BTP alongside React, TypeScript, and modern web technologies",
+      "Strong foundation in responsive design, component architecture, and integration patterns",
+      "Experience with enterprise development lifecycle and modern web deployment practices",
+      "Versatile skill set bridging traditional enterprise and cutting-edge web development",
     ],
-    business: [
-      "Delivered 25+ projects with 100% on-time completion rate",
-      "Reduced development costs through reusable component architecture",
-      "Client satisfaction rate of 98% across all projects",
-      "Team productivity increase of 30% through mentoring and best practices",
+    delivery: [
+      "Proven track record delivering both enterprise SAP solutions and modern web applications",
+      "Focus on clean, maintainable code following industry best practices",
+      "Experience with agile development methodologies and cross-functional team collaboration",
+      "Strong problem-solving skills with systematic approach to debugging and optimization",
+      "Reliable delivery of features that meet both technical and business requirements",
     ],
-    leadership: [
-      "Successfully mentored junior developers to mid-level positions",
-      "Led technical decisions for team of 5+ developers",
-      "Established coding standards and review processes",
-      "Bridged communication between technical and business stakeholders",
+    professional: [
+      "Unique combination of enterprise SAP experience and modern frontend development skills",
+      "Excellent communication with both technical teams and business stakeholders",
+      "Adaptable between enterprise environments and modern web development workflows",
+      "Continuous learner with passion for both established enterprise technologies and emerging web trends",
+      "Collaborative team player with strong work ethic and attention to detail",
     ],
-  },
-
-  // Certifications and education
-  credentials: [
-    {
-      title: "React Developer Professional Certificate",
-      issuer: "Meta",
-      year: "2023",
-      credentialId: "ABC123XYZ",
-    },
-    {
-      title: "AWS Cloud Practitioner",
-      issuer: "Amazon Web Services",
-      year: "2023",
-      credentialId: "GHI789RST",
-    },
-    {
-      title: "Bachelor's Degree in Computer Science",
-      issuer: "University of Lisbon",
-      year: "2021",
-      honors: "First Class Honours",
-    },
-  ],
-};
-
-// Skill statistics and metadata
-export const skillsMetadata = {
-  totalTechnologies: Object.values(technicalSkillsData).reduce(
-    (total, category) => total + category.skills.length,
-    0
-  ),
-  totalCategories: Object.keys(technicalSkillsData).length,
-  yearsExperience: "3+",
-
-  // Most used technologies (could be used for highlighting)
-  featured: ["React", "TypeScript", "Next.js", "Material-UI", "Node.js", "Git"],
-
-  // Learning trajectory
-  currentlyLearning: [
-    {
-      name: "Three.js",
-      category: "frontend",
-      progress: "Beginner",
-      motivation: "3D web experiences",
-    },
-    {
-      name: "GraphQL",
-      category: "backend",
-      progress: "Intermediate",
-      motivation: "Efficient API queries",
-    },
-    {
-      name: "Kubernetes",
-      category: "cloud",
-      progress: "Learning",
-      motivation: "Container orchestration",
-    },
-  ],
-
-  // Expertise levels by category
-  expertiseByCategory: {
-    frontend: "Expert",
-    styling: "Expert",
-    backend: "Intermediate",
-    tools: "Advanced",
-    cloud: "Intermediate",
   },
 };
