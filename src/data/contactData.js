@@ -96,21 +96,21 @@ export const contactData = {
       {
         icon: "LinkedIn",
         label: "LinkedIn",
-        href: "https://linkedin.com/in/claudio-jesus",
+        href: "https://www.linkedin.com/in/claudiojesus00/",
         color: "#1da1f2",
       },
       {
         icon: "GitHub",
         label: "GitHub",
-        href: "https://github.com/claudio-jesus",
+        href: "https://github.com/Gadanup",
         color: "#1da1f2",
       },
-      {
-        icon: "Twitter",
-        label: "Twitter",
-        href: "https://twitter.com/claudio_jesus",
-        color: "#1da1f2",
-      },
+      // {
+      //   icon: "Twitter",
+      //   label: "Twitter",
+      //   href: "https://twitter.com/claudio_jesus",
+      //   color: "#1da1f2",
+      // },
     ],
   },
 
