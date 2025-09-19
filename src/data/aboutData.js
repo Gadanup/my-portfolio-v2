@@ -35,14 +35,14 @@ export const cvOptions = [
     label: "English Version",
     filename: "Claudio_Jesus_CV.pdf",
     language: "EN",
-    size: "89 KB",
+    size: "92 KB",
     icon: <PictureAsPdfIcon />,
   },
   {
     label: "Portuguese Version",
     filename: "Claudio_Jesus_CV_PT.pdf",
     language: "PT",
-    size: "91 KB",
+    size: "92 KB",
     icon: <PictureAsPdfIcon />,
   },
 ];

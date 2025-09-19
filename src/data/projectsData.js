@@ -28,7 +28,7 @@ export const projectsData = {
       ],
       category: "Frontend",
       status: "Live",
-      liveUrl: "https://my-portfolio-v2.com", // Dynamic current URL
+      liveUrl: "https://claudiojesus.dev", // Dynamic current URL
       githubUrl: "https://github.com/Gadanup/my-portfolio-v2",
       completedDate: "28/07/2025", // Current date
       duration: "2 months",
@@ -74,7 +74,7 @@ export const projectsData = {
       ],
       category: "Full Stack",
       status: "Live",
-      liveUrl: "https://demo-ecommerce.com",
+      liveUrl: null,
       githubUrl: "https://github.com/claudio/ecommerce-dashboard",
       completedDate: "07/08/2024",
       duration: "1 month",
@@ -131,6 +131,44 @@ export const projectsData = {
     },
     {
       id: 4,
+      title: "Hayes CheatSheet",
+      description:
+        "A comprehensive inventory and order management system for a GTA V RP mechanic shop.",
+      longDescription:
+        "Hayes CheatSheet is a complete business management solution developed for the 'Hayes' mechanic shop in the GTA V RP server 'Vida Real Roleplay - Legacy'. The system serves as a centralized database for automotive parts inventory, materials management, and client service operations. Used daily by multiple players, it streamlines the entire workflow from customer requests to order fulfillment, providing automated cost calculations and comprehensive stock management.",
+      images: [
+        "/hayes/hayes.png",
+        "/hayes/hayes-criar.png",
+        "/hayes/hayes-orcamentos.png",
+        "hayes/hayes-inventario.png",
+      ],
+      technologies: [
+        "React",
+        "Next.js",
+        "Material-UI",
+        "JavaScript",
+        "Supabase",
+        "API Integration",
+      ],
+      category: "Full Stack",
+      status: "Live",
+      liveUrl: null,
+      githubUrl: null,
+      completedDate: "15/03/2025",
+      duration: "1 month",
+      highlights: [
+        "Automated cost calculations",
+        "Client ticket generation",
+        "Partner pricing system",
+        "Multi-user daily usage",
+        "Complete stock control",
+      ],
+      challenges:
+        "Creating an intuitive interface that handles complex pricing calculations across different customer types while maintaining real-time inventory accuracy in a multi-user environment",
+      color: "#4a90e2",
+    },
+    {
+      id: 5,
       title: "Tugamon",
       description:
         "A Pokemon-inspired web experience celebrating Portuguese cultures.",
@@ -156,7 +194,7 @@ export const projectsData = {
       color: "#4a90e2",
     },
     {
-      id: 5,
+      id: 6,
       title: "Blackbeardz DJ Website",
       description:
         "Professional portfolio and platform for Portuguese DJ duo Blackbeardz.",
