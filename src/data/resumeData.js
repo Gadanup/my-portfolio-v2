@@ -124,6 +124,16 @@ export const certifications = [
   },
   {
     id: 2,
+    name: "Exploring SAP Business Technology Platform",
+    issuer: "SAP",
+    date: "2025",
+    credentialId: null,
+    verifyUrl:
+      "https://www.credly.com/badges/35b5731a-9502-4590-b6a9-374a46180330/public_url",
+    logo: "🧩",
+  },
+  {
+    id: 3,
     name: "React - The Complete Guide 2025",
     issuer: "Udemy",
     date: "Currently Learning",
@@ -131,7 +141,7 @@ export const certifications = [
     logo: "⚛️",
   },
   {
-    id: 3,
+    id: 4,
     name: "Node.js, Express, MongoDB & More: The Complete Bootcamp",
     issuer: "Udemy",
     date: "Currently Learning",
